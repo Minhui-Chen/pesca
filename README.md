@@ -35,3 +35,6 @@ PESCA posterior probabilities for the 9 diseases and complex traits analyzed can
 
 * **Huwenbo Shi**: hshi_AT_hsph.harvard.edu
 * **Kathryn Burch**: kathy.s.burch_AT_gmail.com 
+
+### 
+Had a problem during installation with gcc/10.1.0 in RCC. 

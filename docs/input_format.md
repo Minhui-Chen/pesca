@@ -67,6 +67,8 @@ The following is an example of a LD matrix file.
 
 ## LD matrix list file
 
+NOTE: don't gzip
+
 LD matrix list file contains a list of paths to LD matrices split by region.
 Typically, there should be one such list file for each chromosome and each
 population. LD matrix list files can be specified to PESCA through the

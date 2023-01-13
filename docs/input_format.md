@@ -50,6 +50,8 @@ The following is an example of GWAS summary statistics data list file.
 
 ## LD matrix
 
+NOTE: do not gz
+
 The LD matrix file is a text file that stores the LD matrix of a region. Each
 LD matrix file should correspond to a GWAS summary statistics file of a
 region. There should be M lines and M columns in the LD matrix file, where M

@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import argparse, math, sys
+import warnings
 
 # main function
 def main():
@@ -10,8 +11,12 @@ def main():
     # parse log file
     chrom_cau_cnt_est = []
     for i in range(1,23):
-        chrom_cau_cnt_est.append([])
-        log_file = open('{}{}.log'.format(args.prefix, i), 'r')
+        try:
+            log_file = open('{}{}.log'.format(args.prefix, i), 'r')
+            chrom_cau_cnt_est.append([])
+        except:
+            warnings.warn(f'chromosome {i} missing!')
+            continue
         for line in log_file:
             cols = line.strip().split()
             if cols[0] == 'sigma_sq' or cols[0] == 'iter':
@@ -24,7 +29,7 @@ def main():
     eas_cvg_est = []
     eur_cvg_est = []
     both_cvg_est = []
-    for j in range(22):
+    for j in range(len(chrom_cau_cnt_est)):
         sum_null = []
         sum_eas = []
         sum_eur = []

@@ -21,7 +21,7 @@ def main():
             cols = line.strip().split()
             if cols[0] == 'sigma_sq' or cols[0] == 'iter':
                 continue
-            chrom_cau_cnt_est[i-1].append([float(cols[i]) for i in range(2,6)])
+            chrom_cau_cnt_est[-1].append([float(cols[j]) for j in range(2,6)])
         log_file.close()
 
     # extract last 50 entries
